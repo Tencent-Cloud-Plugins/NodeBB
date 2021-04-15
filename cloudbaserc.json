@@ -1,0 +1,64 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "Nodebb",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "nodebb",
+          "servicePath": "/",
+          "uploadType": "image",
+          "imageInfo": {
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb-nodebb/nodebb-tcb:1.16.2"
+          },
+          "containerPort": 4567,
+          "envVariables": {
+            "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
+            "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
+          },
+          "volumeMounts": {
+            "/data/db": "nodebb-cfs"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "nodebb-cfs"
+        }
+      ],
+      "environment": {
+        "ADMIN_USERNAME": {
+          "description": "管理控制台账号",
+          "required": true,
+          "default": "admin",
+          "validation": {
+            "rule": {
+              "type": "RegExp",
+              "pattern": "[^[a-zA-Z]{2, 16}$]",
+              "flag": "g"
+            },
+            "errorMessage": "字母组成，长度范围是 2 ~ 16"
+          }
+        },
+        "ADMIN_PASSWORD": {
+          "description": "初始管理控制台密码",
+          "required": true,
+          "default": "nodebb@123",
+          "validation": {
+            "rule": {
+              "type": "RegExp",
+              "pattern": "[^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$]",
+              "flag": "g"
+            },
+            "errorMessage": "字母和数字的组合，长度范围是 6 ~ 20"
+          }
+        }
+      }
+    }
+  }
+}
