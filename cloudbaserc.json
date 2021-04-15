@@ -35,15 +35,7 @@
         "ADMIN_USERNAME": {
           "description": "管理控制台账号",
           "required": true,
-          "default": "admin",
-          "validation": {
-            "rule": {
-              "type": "RegExp",
-              "pattern": "^[a-zA-Z]{2, 16}$",
-              "flag": "g"
-            },
-            "errorMessage": "字母组成，长度范围是 2 ~ 16"
-          }
+          "default": "admin"
         },
         "ADMIN_PASSWORD": {
           "description": "初始管理控制台密码",
