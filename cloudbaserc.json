@@ -17,11 +17,20 @@
           "envVariables": {
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
+          },
+          "volumeMounts": {
+            "/data/db": "nodebb-cfs"
           }
         }
       }
     },
     "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "nodebb-cfs"
+        }
+      ],
       "environment": {
         "ADMIN_USERNAME": {
           "description": "管理控制台账号",
