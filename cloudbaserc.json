@@ -10,6 +10,8 @@
           "serviceName": "nodebb",
           "cpu": 2,
           "mem": 4,
+          "minNum": 1,
+          "maxNum": 1,
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
