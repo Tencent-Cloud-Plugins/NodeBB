@@ -15,7 +15,7 @@
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcb-nodebb/nodebb-tcb:1.16.5"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb-nodebb/nodebb-tcb:1.16.6"
           },
           "containerPort": 4567,
           "envVariables": {
@@ -23,7 +23,7 @@
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
           },
           "volumeMounts": {
-            "/data/db": "nodebb-cfs"
+            "/data/git": "nodebb-cfs"
           }
         }
       }
