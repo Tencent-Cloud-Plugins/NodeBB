@@ -19,6 +19,7 @@
           },
           "containerPort": 4567,
           "envVariables": {
+            "APP_URL": "{{env.APP_URL}}",
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
           },
