@@ -19,7 +19,7 @@
           },
           "containerPort": 4567,
           "envVariables": {
-            "APP_URL": "{{env.APP_URL}}",
+            "APP_URL": "https://hello-nodebb-3glii5ovf680e9fa-1255372115.ap-shanghai.app.tcloudbase.com",
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
           },
