@@ -8,8 +8,8 @@
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "serviceName": "nodebb",
-          "cpu": 2,
-          "mem": 4,
+          "cpu": 4,
+          "mem": 8,
           "minNum": 1,
           "maxNum": 1,
           "servicePath": "/",
