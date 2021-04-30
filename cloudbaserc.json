@@ -15,16 +15,16 @@
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcb-nodebb/nodebb-tcb:1.16.6"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.8"
           },
           "containerPort": 4567,
           "envVariables": {
-            "APP_URL": "https://hello-nodebb-3glii5ovf680e9fa-1255372115.ap-shanghai.app.tcloudbase.com",
+            "APP_URL": "https://${TcbHttpServiceDefaultDomain}",
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
           },
           "volumeMounts": {
-            "/data/git": "nodebb-cfs"
+            "/data/db": "nodebb-cfs"
           }
         }
       }
