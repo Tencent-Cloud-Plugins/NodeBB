@@ -15,7 +15,7 @@
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.11"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.12"
           },
           "containerPort": 4567,
           "envVariables": {
