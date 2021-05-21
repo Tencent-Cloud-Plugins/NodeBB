@@ -8,14 +8,14 @@
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "serviceName": "nodebb",
-          "cpu": 4,
-          "mem": 8,
-          "minNum": 1,
+          "cpu": 2,
+          "mem": 4,
+          "minNum": 0,
           "maxNum": 1,
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.12"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.16.2"
           },
           "containerPort": 4567,
           "envVariables": {
@@ -24,7 +24,8 @@
             "ADMIN_PASSWORD": "{{env.ADMIN_PASSWORD}}"
           },
           "volumeMounts": {
-            "/data/db": "nodebb-cfs"
+            "/data/db": "nodebb-cfs",
+            "/usr/src/app/public/uploads": "nodebb-cfs-upload"
           }
         }
       }
@@ -34,6 +35,10 @@
         {
           "type": "CFS",
           "name": "nodebb-cfs"
+        },
+        {
+          "type": "CFS",
+          "name": "nodebb-cfs-upload"
         }
       ],
       "environment": {
