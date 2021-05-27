@@ -8,16 +8,16 @@
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "serviceName": "nodebb",
-          "cpu": 2,
-          "mem": 4,
+          "cpu": 4,
+          "mem": 8,
           "minNum": 0,
           "maxNum": 1,
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.16.3"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.16.2"
           },
-          "containerPort": 80,
+          "containerPort": 4567,
           "envVariables": {
             "APP_URL": "https://${TcbHttpServiceDefaultDomain}",
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
