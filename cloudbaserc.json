@@ -15,9 +15,9 @@
           "servicePath": "/",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.16.2"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcbimages/nodebb-tcb:1.16.3"
           },
-          "containerPort": 4567,
+          "containerPort": 80,
           "envVariables": {
             "APP_URL": "https://${TcbHttpServiceDefaultDomain}",
             "ADMIN_USERNAME": "{{env.ADMIN_USERNAME}}",
